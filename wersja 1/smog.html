@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="pl-PL">
+<title>Testowa strona HTML</title>
+
+<body>
+	<script src="smogLib.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+	
+
+	<img src="http://www.dabrowatar.pl/wp-content/uploads/2017/02/Indeks-jako%C5%9Bci-powietrza.png" alt="" />
+	<h3>Czujnik Ochocice</h3>
+	
+	<div class="container">
+		<canvas id="ochocice" width="300" height="250" style = "border: solid 1px;"></canvas>	
+		<iframe width="450" height="250" src="https://thingspeak.com/channels/651133/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Czujnik+PM2%2C5+Ochocice&type=line&xaxis=Data&yaxis=%C2%B5g%2Fm3"></iframe>
+		
+		<iframe width="450" height="250" src="https://thingspeak.com/channels/651133/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Czujnik+PM10+Ochocice&type=line&xaxis=Data&yaxis=%C2%B5g%2Fm3"></iframe>
+	</div>
+	<h3>Czujnik Kamieńsk ul. Sucharskiego</h3>
+	<div class="container">
+		<iframe width="450" height="250" src="https://thingspeak.com/channels/649620/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Czujnik+PM+2%2C5+Kamie%C5%84sk+Sucharskiego&type=line&xaxis=Data&yaxis=%C2%B5g%2Fm3"></iframe>
+
+		<iframe width="450" height="250" src="https://thingspeak.com/channels/649620/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Czujnik+PM+10+Kamie%C5%84sk+Sucharskiego&type=line&xaxis=Data&yaxis=%C2%B5g%2Fm3"></iframe>
+	</div>
+
+
+	<script type="text/javascript">
+		getDataFromChannel("651133", "ochocice");
+	</script>
+
+</body>
+
+</html>
